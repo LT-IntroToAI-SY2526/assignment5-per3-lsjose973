@@ -102,12 +102,12 @@ class Board:
         """Finds the coordinates (row and column indices) of the cell that contains the
         fewest possible values to assign (the shortest list). Note: in the case of ties
         return the coordinates of the first minimum size cell found
-
         Returns:
             a tuple of row, column index identifying the most constrained cell
         """
         min_length = 9
-        loc = (0, 0)
+        min_row = 0
+        min_col = 0
         for row in range(self.size):
             for col in range(self.size):
                 cell = self.rows[row][col]
@@ -115,8 +115,9 @@ class Board:
                     print(f"({row}, {col}): {cell}")
                     if len(cell) < min_length:
                         min_length = len(cell)
-                        loc = (row, col)
-        return loc
+                        min_row = row
+                        min_col = col
+        return (min_row, min_col)
 
 
     def failure_test(self) -> bool:
