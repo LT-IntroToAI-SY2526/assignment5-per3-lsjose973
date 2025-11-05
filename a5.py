@@ -106,7 +106,18 @@ class Board:
         Returns:
             a tuple of row, column index identifying the most constrained cell
         """
-        pass
+        min_length = 9
+        loc = (0, 0)
+        for row in range(self.size):
+            for col in range(self.size):
+                cell = self.rows[row][col]
+                if isinstance(cell, list):
+                    print(f"({row}, {col}): {cell}")
+                    if len(cell) < min_length:
+                        min_length = len(cell)
+                        loc = (row, col)
+        return loc
+
 
     def failure_test(self) -> bool:
         """Check if we've failed to correctly fill out the puzzle. If we find a cell
@@ -116,7 +127,7 @@ class Board:
         Returns:
             True if we have failed to fill out the puzzle, False otherwise
         """
-        pass
+        pass    
 
     def goal_test(self) -> bool:
         """Check if we've completed the puzzle (if we've placed all the numbers).
@@ -169,8 +180,7 @@ def BFS(state: Board) -> Board:
     Returns:
         either None in the case of invalid input or a solved board
     """
-    pass
-
+    pass 
 
 if __name__ == "__main__":
     # uncomment the below lines once you've implemented the board class
