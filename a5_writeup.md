@@ -25,6 +25,7 @@ After completing the assignment, answer the following reflection questions:
 
 
 
+
 2. How can you apply what you learned in this assignment to future programs or projects? Consider other types of problems that involve searching through possibilities, making decisions, and backtracking when those decisions don't work out. Can you think of real-world scenarios where DFS or BFS might be useful? What about other constraint satisfaction problems?
 
 
