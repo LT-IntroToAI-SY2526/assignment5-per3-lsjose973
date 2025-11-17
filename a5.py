@@ -110,7 +110,7 @@ class Board:
         min_length = 9
         min_row = 0
         min_col = 0
-
+        
         for row in range(self.size):
             for col in range(self.size):
                 cell = self.rows[row][col]
